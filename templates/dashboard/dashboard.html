@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{%load static%}
+{% comment %}  Add above two lines in every template. {% endcomment %}
+{% block title %} Dashboard{% endblock title %}
+
+{% block content %}
+<img src="{% static 'images/cat.jpg' %}" alt="Cat Image">
+You Are seeing this Because you are logged in .. I'm a cat person. 
+{% endblock content %}
