@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Items {% endblock title%} 
+{% block content %} 
+<div>
+My Item
+<ul>
+    {% for item in items %}
+        <li> {{item.item_name}}- QTY: {{item.quatity}} - Hightest Bid : {{item.item_quantity}} - My Bid : {{item.item_price_bid}}</li>
+    {% endfor %}
+</ul>
+</div>
+
+
+{% endblock content %}

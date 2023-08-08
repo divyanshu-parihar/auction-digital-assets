@@ -7,5 +7,6 @@ from .views import home
 urlpatterns = [
     path('',home),
     path('auth/',include('auth.urls')),
-    path('accounts/',include('accounts.urls'))
+    path('accounts/',include('accounts.urls')),
+    path('items/',include('auctionables.urls'))
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
