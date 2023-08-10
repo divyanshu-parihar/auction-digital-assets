@@ -7,7 +7,7 @@ class AuctionableModel(models.Model):
     item_price_bid = models.IntegerField()
     item_highest_price= models.IntegerField()
     item_quatity = models.IntegerField()
-
+    item_image = models.ImageField(default='https://sm.mashable.com/t/mashable_sea/photo/default/man-fakes-death-cat-q6u_2z9w.2496.png')
     def __str__(self):
         return self.item_name + "(" + self.item_owner.username + ")"
     
