@@ -5,7 +5,7 @@
 My Item
 <ul>
     {% for item in items %}
-        <li> {{item.item_name}}- QTY: {{item.quatity}} - Hightest Bid : {{item.item_quantity}} - My Bid : {{item.item_price_bid}}</li>
+        <li> {{item.id}}: {{item.item_name}}- QTY: {{item.item_quatity}} - Hightest Bid : {{item.item_highest_price}} - My Bid : {{item.item_price_bid}}</li>
     {% endfor %}
 </ul>
 </div>

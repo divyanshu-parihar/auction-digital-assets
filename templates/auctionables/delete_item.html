@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Delete - Auctionables{% endblock title %}
+
+{% block content %}
+<div>
+    Delete Item 
+    <form action="/items/delete/{{item.id}}" method="post">
+        {% csrf_token %}
+        [{{item.item_name}}] is about to deletd . Please confirm
+        <input type="submit" value="DELETE">
+    </form>
+    </div>
+{% endblock content %}
