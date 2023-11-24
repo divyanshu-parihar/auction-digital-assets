@@ -6,8 +6,16 @@ My Item
 <ul>
     {% for item in items %}
         <li> {{item.id}}: {{item.item_name}}- QTY: {{item.item_quatity}} - Hightest Bid : {{item.item_highest_price}} - My Bid : {{item.item_price_bid}}</li>
-        <img src="/media/{{item.item_image}}" alt="user auction item image">
+        <img width = '200' height='200' src="{{item.item_image}}" alt="user auction item image">
     {% endfor %}
+    <br>
+    Bids on your lisings: 
+
+    {% for item in bids %}
+        <li>Bidder Email: {{item.bidder_email}} |  Amount: {{item.item_bid_amount}} || Description : {{item.item_description}} </li>
+    {% endfor %}
+
+
 </ul>
 </div>
 {% endblock content %}

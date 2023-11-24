@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Items {% endblock title%} 
+{% block content %} 
+<div>
+Public Bids
+<ul>
+    {% for item in items %}
+        <li> {{item.id}}: {{item.item_name}}- QTY: {{item.item_quatity}} - Hightest Bid : {{item.item_highest_price}}</li>
+        <img width = '200' height='200' src="{{item.item_image}}" alt="user auction item image">
+        
+    {% endfor %}
+    {{form.errors}}
+        <form method='post' action='.' >
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type='submit'> Bid</button>
+        <form>
+</ul>
+</div>
+{% endblock content %}

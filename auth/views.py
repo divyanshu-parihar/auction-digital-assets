@@ -13,6 +13,7 @@ def register(request):
             'form':form,
     }) 
     form = SignUpForm()
+    print(form)
     return render(request,'auth/signup.html',{
         'form':form
     })

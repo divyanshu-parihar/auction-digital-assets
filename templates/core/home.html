@@ -1,5 +1,116 @@
+
 {% extends 'base.html' %}
+{% load static%}
+
 {% block title %} Home {% endblock title%} 
 {% block content %} 
-Home Page
+<section id="theNavbar">
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="{% url 'home' %}" class="nav-link px-2 text-secondary">Home</a></li>
+              <li><a href="{% url 'dashboard' %}" class="nav-link px-2 text-white">Dashboard</a></li>
+            </ul>
+    
+            {% comment %} <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form> {% endcomment %}
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2"><a class='text-decoration-none' href="{% url 'login'%}">Login</a></button>
+              <button type="button" class="btn btn-warning"><a class='text-decoration-none' href="{% url 'register'%}">Sign Up</a></button>
+            </div>
+          </div>
+        </div>
+    </header>      
+  </section> 
+  
+  
+  <section>
+    <div class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Buying and Selling made easier with AuctionEase </h1>
+          <p class="lead"> AuctionEase is your comprehensive solution for managing, organizing, and conducting successful online auctions. Whether you're a seasoned auctioneer, a non-profit organization, or an individual looking to host a fundraising event, our platform provides the tools you need to streamline the entire process..</p>
+          
+        </div>
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3" src="{% static 'images/E-auction.png' %}" alt="" width="720">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section>
+    <div class="container px-4 py-5" id="icon-grid">
+      <h2 class="pb-2 border-bottom">Key Features</h2>
+  
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">User-Friendly Interface</h3>
+            <p>Our intuitive dashboard makes it easy for both organizers and participants to navigate through the auction process..</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Customizable Auctions</h3>
+            <p>Tailor your auctions to suit your specific needs, whether it's a charity fundraiser, art auction, or estate sale..</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Bidding Management</h3>
+            <p>Participants can place bids, set auto-bids, and receive real-time notifications to stay engaged throughout the auction.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Iventory Management</h3>
+            <p>Effortlessly catalog and organize your items, complete with descriptions, images, and starting bids.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Payment Processing</h3>
+            <p>Securely handle payments through integrated payment gateways, ensuring a smooth transaction process.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Analytics and Reporting</h3>
+            <p>Gain valuable insights into your auctions, including bidder behavior, item popularity, and revenue generated.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Marketing Tools</h3>
+            <p>Promote your auctions through customizable email campaigns, social media integration, and targeted advertising.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Compliance and Security</h3>
+            <p>Rest easy knowing that our platform complies with industry standards and employs robust security measures to protect sensitive information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock content %}
